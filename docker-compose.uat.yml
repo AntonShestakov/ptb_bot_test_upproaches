@@ -1,0 +1,4 @@
+services:
+  bot:
+    container_name: telegram-bot-uat
+    env_file: .env.uat

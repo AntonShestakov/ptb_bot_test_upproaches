@@ -4,6 +4,8 @@ services:
     container_name: telegram-bot-prod
     restart: unless-stopped
     env_file: .env
+#    volumes:
+#      - ./logs:/app/log        # EC2 host path : container path
     logging:
       driver: "json-file"
       options:

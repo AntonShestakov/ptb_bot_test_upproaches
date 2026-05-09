@@ -2,3 +2,5 @@ services:
   bot:
     container_name: telegram-bot-uat
     env_file: .env.uat
+#    volumes:
+#      - ./logs-uat:/app/log    # separate folder for UAT logs

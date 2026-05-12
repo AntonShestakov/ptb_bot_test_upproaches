@@ -19,10 +19,8 @@ pip install -r bot/requirements.txt
 Go to your repo → Settings → Secrets and variables → Actions → New repository secret
 ```aiignore
 Name:  TELEGRAM_TOKEN_PROD
-Value: 7512648390:AAFxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Name:  TELEGRAM_TOKEN_UAT
-Value: 7198374652:AAGxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Key: EC2_SSH_KEY_UAT 
 Description: Private SSH key for UAT EC2

@@ -18,9 +18,9 @@ pip install -r bot/requirements.txt
 ### Add to GitHub Secrets
 Go to your repo → Settings → Secrets and variables → Actions → New repository secret
 ```aiignore
-Name:  TELEGRAM_TOKEN_PROD
-
-Name:  TELEGRAM_TOKEN_UAT
+Name:   TELEGRAM_TOKEN_PROD 
+        TELEGRAM_TOKEN_UAT
+Open Telegram → message @BotFather → and follow
 
 Key: EC2_SSH_KEY_UAT 
 Description: Private SSH key for UAT EC2
@@ -31,7 +31,6 @@ Description: Private SSH key for Prod EC2
 
 ## How\Where to get
 ### *TELEGRAM_TOKEN_** 
-Open Telegram → message @BotFather → and follow
 
 ### *EC2_SSH_KEY_** 
 Run `ssh-keygen -t ed25519 -C "github-actions"` on your local machine. 

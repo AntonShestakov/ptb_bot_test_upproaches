@@ -1,6 +1,6 @@
 services:
   bot:
-    image: your-bot:${IMAGE_TAG:-latest}
+    image: peredachka:${IMAGE_TAG:-latest}
     container_name: telegram-bot-prod
     restart: unless-stopped
     env_file: .env

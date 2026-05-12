@@ -21,10 +21,10 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -f docker/Dockerfile \
-            -t $ECR_REGISTRY/your-bot:$IMAGE_TAG \
-            -t $ECR_REGISTRY/your-bot:latest .
-          docker push $ECR_REGISTRY/your-bot:$IMAGE_TAG
-          docker push $ECR_REGISTRY/your-bot:latest
+            -t $ECR_REGISTRY/peredachka:$IMAGE_TAG \
+            -t $ECR_REGISTRY/peredachka:latest .
+          docker push $ECR_REGISTRY/peredachka:$IMAGE_TAG
+          docker push $ECR_REGISTRY/peredachka:latest
 
       - name: Deploy to EC2 (Production)
         uses: appleboy/ssh-action@v1

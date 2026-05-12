@@ -33,8 +33,10 @@ Description: Private SSH key for Prod EC2
 ### *TELEGRAM_TOKEN_** 
 
 ### *EC2_SSH_KEY_** 
-Run `ssh-keygen -t ed25519 -C "github-actions"` on your local machine. 
+Run `ssh-keygen -t ed25519 -C "github-actions"` on your local machine; 
+BTW: It can be already prepared, just copy from the file 
 The private key goes into GitHub Secrets. The public key goes into `~/.ssh/authorized_keys` on the EC2 instance
+
 
 ### *AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY*
 AWS Console → IAM → Users → your user → Security credentials → Create access key → 

@@ -35,7 +35,8 @@ Description: Private SSH key for Prod EC2
 ### *EC2_SSH_KEY_** 
 Run `ssh-keygen -t ed25519 -C "github-actions"` on your local machine; 
 BTW: It can be already prepared, just copy ENTIRE thing from the file 
-The private key goes into GitHub Secrets. The public key goes into `~/.ssh/authorized_keys` on the EC2 instance
+The private key goes into GitHub Secrets. 
+The public key goes into `~/.ssh/authorized_keys` on the EC2 instance(in can be multiple keys)
 
 
 ### *AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY*

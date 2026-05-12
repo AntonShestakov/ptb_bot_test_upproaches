@@ -82,14 +82,24 @@ mkdir -p /home/ec2-user/bot/logs
 mkdir -p /home/ec2-user/bot/logs-uat
 ```
 - Attach an IAM Instance Role to the EC2 with this policy:
+IAM → Users → cicd_user → Permissions → Add permissions → Attach inline policy → Paste
 ```aiignore
 {
-  "Effect": "Allow",
-  "Action": [
-    "ecr:GetAuthorizationToken",
-    "ecr:BatchGetImage",
-    "ecr:GetDownloadUrlForLayer"
-  ],
-  "Resource": "*"
-}
-```
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:InitiateLayerUpload",
+        "ecr:UploadLayerPart",
+        "ecr:CompleteLayerUpload",
+        "ecr:PutImage"
+      ],
+      "Resource": "*"
+    }
+  ]
+}```

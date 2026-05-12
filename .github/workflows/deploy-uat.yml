@@ -50,8 +50,10 @@ jobs:
           host: ${{ secrets.EC2_HOST_UAT }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY_UAT }}
-          envs: IMAGE_TAG
+          envs: IMAGE_TAG, TELEGRAM_TOKEN, DATABASE_URL
           script: |
             export IMAGE_TAG=${{ github.sha }}
+            export TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN_UAT }}
+            export DATABASE_URL=${{ secrets.DATABASE_URL_UAT }}
             cd /home/ec2-user/bot
             bash scripts/deploy.sh uat

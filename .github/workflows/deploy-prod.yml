@@ -34,5 +34,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY_PROD }}
           script: |
             export IMAGE_TAG=${{ github.sha }}
+            export TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN_PROD }}
             cd /home/ec2-user/bot
             bash scripts/deploy.sh prod

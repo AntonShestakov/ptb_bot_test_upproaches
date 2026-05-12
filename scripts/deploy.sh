@@ -12,8 +12,9 @@ EOF
 
 echo "✅ .env written"
 
-ECR_REGISTRY="<your-account-id>.dkr.ecr.<region>.amazonaws.com"
-IMAGE="$ECR_REGISTRY/your-bot:${IMAGE_TAG:-latest}"
+#ECR_REGISTRY="<your-account-id>.dkr.ecr.<region>.amazonaws.com"
+ECR_REGISTRY=${ECR_REGISTRY}
+IMAGE="$ECR_REGISTRY/peredachka:${IMAGE_TAG:-latest}"
 COMPOSE_FILE="docker-compose.yml"
 
 echo "▶ Deploying [$ENV] — image: $IMAGE"

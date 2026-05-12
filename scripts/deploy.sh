@@ -20,9 +20,8 @@ COMPOSE_FILE="docker-compose.yml"
 echo "▶ Deploying [$ENV] — image: $IMAGE"
 
 # Pull latest image from ECR
-aws ecr get-login-password --region <region> | \
-  docker login --username AWS --password-stdin $ECR_REGISTRY
-
+aws ecr get-login-password --region $AWS_REGION \
+  | docker login --username AWS --password-stdin $ECR_REGISTRY
 docker pull $IMAGE
 
 # UAT uses override file

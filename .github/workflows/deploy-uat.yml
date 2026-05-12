@@ -2,7 +2,7 @@ name: Deploy to UAT
 
 on:
   push:
-    branches: [uat]
+    branches: [uat, implement_ec2_deployment]
 
 jobs:
   deploy:
